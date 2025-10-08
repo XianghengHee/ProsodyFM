@@ -1,0 +1,13 @@
+defaults:
+  - ljspeech
+  - _self_
+
+_target_: prosodyfm.data.text_mel_datamodule.TextMelDataModule
+name: libritts
+train_filelist_path: ./with_boundary_intonation/libritts_audio_sid_text_train_filelist_b_pitchseg.pkl
+valid_filelist_path: ./with_boundary_intonation/libritts_audio_sid_text_val_filelist_b_pitchseg.pkl
+add_blank: True
+n_spks: 326
+data_statistics:  # Computed for vctk dataset
+  mel_mean: -5.503524
+  mel_std: 2.112483

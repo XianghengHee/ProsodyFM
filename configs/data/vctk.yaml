@@ -1,0 +1,13 @@
+defaults:
+  - ljspeech
+  - _self_
+
+_target_: prosodyfm.data.text_mel_datamodule.TextMelDataModule
+name: vctk
+train_filelist_path: .with_boundary_intonation/vctk_audio_sid_text_train_filelist_b_pitchseg.pkl
+valid_filelist_path: ./with_boundary_intonation/vctk_audio_sid_text_val_filelist_b_pitchseg.pkl
+add_blank: True
+n_spks: 109
+data_statistics:  # Computed for vctk dataset
+  mel_mean: -6.630575
+  mel_std: 2.482914
